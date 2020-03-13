@@ -77,29 +77,37 @@ void opcion1(){
         cout << "Ingrese la parte imaginaria Z: ";
         cin >> imaginario3;
         complejo cX( real, imaginario );
-        complejo cY( real, imaginario );
-        complejo cZ( real, imaginario );
+        complejo cY( real2, imaginario2 );
+        complejo cZ( real3, imaginario3 );
         Vector<complejo> v(cX, cY, cZ);
        _complejo.push_back(v);
     }
 }
 
-void opcion2(){
+void listarR(){
     cout << endl << endl;
     cout << "Vectores Racionales" << endl;
     for (int i = 0; i < _racional.size(); i++){
-       cout << i+1 << ". " << "[" << _racional[i].getX().toString() << ", "; 
+       cout << i << ". " << "[" << _racional[i].getX().toString() << ", "; 
        cout << _racional[i].getY().toString() << ", "; 
        cout << _racional[i].getZ().toString() << "]" << endl; 
     }
+}
+
+void listarC(){
     cout << endl << endl;
     cout << "Vectores Complejos" << endl;
     for (int i = 0; i < _complejo.size(); i++){
-      cout << i+1 << ". " << "[" << _complejo[i].getX().toString() << ", "; 
+      cout << i << ". " << "[" << _complejo[i].getX().toString() << ", "; 
        cout << _complejo[i].getY().toString() << ", "; 
        cout << _complejo[i].getZ().toString() << "]" << endl; 
     }
     cout << endl << endl;
+}
+
+void opcion2(){
+    listarR();
+    listarC();
 }
 
 void opcion3(){
@@ -108,4 +116,66 @@ void opcion3(){
     cout << "2- Multiplicacion" << endl;
     cout << "Ingrese la opcion: ";
     cin >> opcion;
+    if( opcion == 1 ){
+        int op1;
+        cout << "1- Complejos" << endl << "2- Racionales" << endl << "Ingrese la opcion: ";
+        cin >> op1;
+        if( op1 == 1 ){
+            listarC();
+            int num, num2;
+            cout << endl << endl;
+            cout << "Ingrese el numero del primer vector a sumar: ";
+            cin >> num;
+            cout << "Ingrese el numero del segundo vector a sumar: ";
+            cin >> num2;
+            Vector<complejo> suma = _complejo[num] + _complejo[num2];
+            cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
+            cout << suma.getY().toString() << ", "; 
+            cout << suma.getZ().toString() << "]" << endl; 
+        }
+        if( op1 == 2 ){
+            listarR();
+            int num, num2;
+            cout << endl << endl;
+            cout << "Ingrese el numero del primer vector a sumar: ";
+            cin >> num;
+            cout << "Ingrese el numero del segundo vector a sumar: ";
+            cin >> num2;
+            Vector<racional> suma = _racional[num] + _racional[num2];
+            cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
+            cout << suma.getY().toString() << ", "; 
+            cout << suma.getZ().toString() << "]" << endl; 
+        }
+    }
+    if( opcion == 2 ){
+        int op1;
+        cout << "1- Complejos" << endl << "2- Racionales" << endl << "Ingrese la opcion: ";
+        cin >> op1;
+        if( op1 == 1 ){
+            listarC();
+            int num, num2;
+            cout << endl << endl;
+            cout << "Ingrese el numero del primer vector a multiplicar: ";
+            cin >> num;
+            cout << "Ingrese el numero del segundo vector a multiplicar: ";
+            cin >> num2;
+            Vector<complejo> multiplicacion = _complejo[num] * _complejo[num2];
+            cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
+            cout << multiplicacion.getY().toString() << ", "; 
+            cout << multiplicacion.getZ().toString() << "]" << endl; 
+        }
+        if( op1 == 2 ){
+            listarR();
+            int num, num2;
+            cout << endl << endl;
+            cout << "Ingrese el numero del primer vector a multiplicar: ";
+            cin >> num;
+            cout << "Ingrese el numero del segundo vector a multiplicar: ";
+            cin >> num2;
+            Vector<racional> multiplicacion = _racional[num] * _racional[num2];
+            cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
+            cout << multiplicacion.getY().toString() << ", "; 
+            cout << multiplicacion.getZ().toString() << "]" << endl; 
+        }
+    }
 }

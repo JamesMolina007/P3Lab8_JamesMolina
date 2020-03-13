@@ -9,7 +9,7 @@ racional::racional( int numerador, int denominador ){
 
 void racional::simplificar( int numerador, int denominador ){
     for (int i = 1; i <= numerador; i++){
-       while( numerador % i == 0 && denominador % i == 0){
+       if( numerador % i == 0 && denominador % i == 0){
            numerador /= i;
            denominador /= i;
        }

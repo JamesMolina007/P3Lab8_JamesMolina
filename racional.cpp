@@ -17,3 +17,15 @@ void racional::simplificar( int numerador, int denominador ){
     (*this).numerador = numerador;
     (*this).denominador = denominador;
 }
+
+racional racional::operator+( racional r2 ){
+    int denominador = (*this).getDenominador() * r2.getDenominador();
+    int numerador = (*this).getNumerador() * r2.getDenominador() + (*this).getDenominador() * r2.getNumerador();
+    return racional( numerador, denominador );
+}
+
+racional racional::operator*( racional r2 ){
+    int denominador = (*this).getDenominador() * r2.getDenominador();
+    int numerador = (*this).getNumerador() * r2.getNumerador();
+    return racional( numerador, denominador );
+}
