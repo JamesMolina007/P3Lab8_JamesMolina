@@ -116,6 +116,7 @@ void opcion3(){
     cout << "2- Multiplicacion" << endl;
     cout << "Ingrese la opcion: ";
     cin >> opcion;
+    cout << endl << endl;
     if( opcion == 1 ){
         int op1;
         cout << "1- Complejos" << endl << "2- Racionales" << endl << "Ingrese la opcion: ";
@@ -123,7 +124,6 @@ void opcion3(){
         if( op1 == 1 ){
             listarC();
             int num, num2;
-            cout << endl << endl;
             cout << "Ingrese el numero del primer vector a sumar: ";
             cin >> num;
             cout << "Ingrese el numero del segundo vector a sumar: ";
@@ -136,7 +136,6 @@ void opcion3(){
         if( op1 == 2 ){
             listarR();
             int num, num2;
-            cout << endl << endl;
             cout << "Ingrese el numero del primer vector a sumar: ";
             cin >> num;
             cout << "Ingrese el numero del segundo vector a sumar: ";
@@ -154,7 +153,6 @@ void opcion3(){
         if( op1 == 1 ){
             listarC();
             int num, num2;
-            cout << endl << endl;
             cout << "Ingrese el numero del primer vector a multiplicar: ";
             cin >> num;
             cout << "Ingrese el numero del segundo vector a multiplicar: ";
@@ -167,7 +165,6 @@ void opcion3(){
         if( op1 == 2 ){
             listarR();
             int num, num2;
-            cout << endl << endl;
             cout << "Ingrese el numero del primer vector a multiplicar: ";
             cin >> num;
             cout << "Ingrese el numero del segundo vector a multiplicar: ";
