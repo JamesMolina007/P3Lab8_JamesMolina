@@ -128,10 +128,12 @@ void opcion3(){
             cin >> num;
             cout << "Ingrese el numero del segundo vector a sumar: ";
             cin >> num2;
-            Vector<complejo> suma = _complejo[num] + _complejo[num2];
-            cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
-            cout << suma.getY().toString() << ", "; 
-            cout << suma.getZ().toString() << "]" << endl; 
+            if( num < _complejo.size() && num2 < _complejo.size() ){
+                Vector<complejo> suma = _complejo[num] + _complejo[num2];
+                cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
+                cout << suma.getY().toString() << ", "; 
+                cout << suma.getZ().toString() << "]" << endl; 
+            }else cout << endl << "VECTORES INEXISTENTES" << endl;
         }
         if( op1 == 2 ){
             listarR();
@@ -140,10 +142,12 @@ void opcion3(){
             cin >> num;
             cout << "Ingrese el numero del segundo vector a sumar: ";
             cin >> num2;
-            Vector<racional> suma = _racional[num] + _racional[num2];
-            cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
-            cout << suma.getY().toString() << ", "; 
-            cout << suma.getZ().toString() << "]" << endl; 
+            if( num < _racional.size() && num2 < _racional.size() ){
+                Vector<racional> suma = _racional[num] + _racional[num2];
+                cout << "Suma: " << "[" << suma.getX().toString() << ", "; 
+                cout << suma.getY().toString() << ", "; 
+                cout << suma.getZ().toString() << "]" << endl; 
+            }else cout << endl << "VECTORES INEXISTENTES" << endl;
         }
     }
     if( opcion == 2 ){
@@ -157,10 +161,12 @@ void opcion3(){
             cin >> num;
             cout << "Ingrese el numero del segundo vector a multiplicar: ";
             cin >> num2;
-            Vector<complejo> multiplicacion = _complejo[num] * _complejo[num2];
-            cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
-            cout << multiplicacion.getY().toString() << ", "; 
-            cout << multiplicacion.getZ().toString() << "]" << endl; 
+            if( num < _complejo.size() && num2 < _complejo.size() ){
+                Vector<complejo> multiplicacion = _complejo[num] * _complejo[num2];
+                cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
+                cout << multiplicacion.getY().toString() << ", "; 
+                cout << multiplicacion.getZ().toString() << "]" << endl; 
+            }else cout << endl << "VECTORES INEXISTENTES" << endl;
         }
         if( op1 == 2 ){
             listarR();
@@ -169,10 +175,12 @@ void opcion3(){
             cin >> num;
             cout << "Ingrese el numero del segundo vector a multiplicar: ";
             cin >> num2;
-            Vector<racional> multiplicacion = _racional[num] * _racional[num2];
-            cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
-            cout << multiplicacion.getY().toString() << ", "; 
-            cout << multiplicacion.getZ().toString() << "]" << endl; 
+            if( num < _racional.size() && num2 < _racional.size() ){
+                Vector<racional> multiplicacion = _racional[num] * _racional[num2];
+                cout << "Multiplicacion: " << "[" << multiplicacion.getX().toString() << ", "; 
+                cout << multiplicacion.getY().toString() << ", "; 
+                cout << multiplicacion.getZ().toString() << "]" << endl; 
+            }else cout << endl << "VECTORES INEXISTENTES" << endl;
         }
     }
 }

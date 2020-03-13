@@ -1,4 +1,4 @@
 all:
-	g++ main.cpp
+	g++ main.cpp racional.cpp complejo.cpp
 cleanup:
 	rm Programa
